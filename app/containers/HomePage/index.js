@@ -19,6 +19,7 @@ import {
   makeSelectLoading,
   makeSelectError,
 } from 'containers/App/selectors';
+import StringList from 'components/StringList';
 import CenteredSection from './CenteredSection';
 import Section from './Section';
 import messages from './messages';
@@ -39,14 +40,14 @@ export function HomePage({ list, loading, error, onMount }) {
   };
 
   useEffect(() => {
+    // load strings
     if (list === false) {
       onMount();
     }
   }, []);
 
   console.log('in homepage');
-  console.log('LIST', list);
-  console.log('listprops', listProps);
+  console.log('listprops', listProps.list);
 
   return (
     <Section>
@@ -54,6 +55,7 @@ export function HomePage({ list, loading, error, onMount }) {
         <h1>
           <FormattedMessage {...messages.header} />
         </h1>
+        <StringList {...listProps} />
       </CenteredSection>
     </Section>
   );
