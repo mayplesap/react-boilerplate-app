@@ -14,6 +14,7 @@ function ListItem(props) {
   return (
     <Wrapper>
       <Item>{props.item}</Item>
+      <p>This is listItem</p>
     </Wrapper>
   );
 }
