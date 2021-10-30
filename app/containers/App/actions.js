@@ -15,27 +15,31 @@
  *    }
  */
 
-import { LOAD_LIST, LOAD_LIST_SUCCESS, LOAD_LIST_ERROR } from './constants';
+import {
+  LOAD_STRING,
+  LOAD_STRING_SUCCESS,
+  LOAD_STRING_ERROR,
+} from './constants';
 
 /**
  * Load the list, this action starts the request saga
  *
- * @return {object} An action object with a type of LOAD_LIST
+ * @return {object} An action object with a type of LOAD_STRING
  */
 export function loadList() {
   return {
-    type: LOAD_LIST,
+    type: LOAD_STRING,
   };
 }
 
 /**
  * Dispatched when the list is loaded by the request saga
  *
- * @return {object}      An action object with a type of LOAD_LIST_SUCCESS passing the repos
+ * @return {object}      An action object with a type of LOAD_STRING_SUCCESS passing the repos
  */
 export function listLoaded(strings) {
   return {
-    type: LOAD_LIST_SUCCESS,
+    type: LOAD_STRING_SUCCESS,
     strings,
   };
 }
@@ -45,11 +49,11 @@ export function listLoaded(strings) {
  *
  * @param  {object} error The error
  *
- * @return {object}       An action object with a type of LOAD_LIST_ERROR passing the error
+ * @return {object}       An action object with a type of LOAD_STRING_ERROR passing the error
  */
 export function listLoadingError(error) {
   return {
-    type: LOAD_LIST_ERROR,
+    type: LOAD_STRING_ERROR,
     error,
   };
 }

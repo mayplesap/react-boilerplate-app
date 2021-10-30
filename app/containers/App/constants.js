@@ -9,6 +9,6 @@
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
 
-export const LOAD_LIST = 'boilerplate/App/LOAD_LIST';
-export const LOAD_LIST_SUCCESS = 'boilerplate/App/LOAD_LIST_SUCCESS';
-export const LOAD_LIST_ERROR = 'boilerplate/App/LOAD_LIST_ERROR';
+export const LOAD_STRING = 'boilerplate/App/LOAD_STRING';
+export const LOAD_STRING_SUCCESS = 'boilerplate/App/LOAD_STRING_SUCCESS';
+export const LOAD_STRING_ERROR = 'boilerplate/App/LOAD_STRING_ERROR';
