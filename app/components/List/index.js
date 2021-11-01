@@ -19,7 +19,7 @@ function List(props) {
   }
   return (
     <Wrapper>
-      <Ul>{content} list </Ul>
+      <Ul>{content}</Ul>
     </Wrapper>
   );
 }
