@@ -32,7 +32,7 @@ const appReducer = (state = initialState, action) =>
         break;
 
       case LOAD_STRING_SUCCESS:
-        draft.strings = false;
+        draft.strings = action.strings;
         draft.loading = false;
         break;
 
