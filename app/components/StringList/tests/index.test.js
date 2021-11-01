@@ -41,7 +41,7 @@ describe('<StringList />', () => {
 
   it('should not render anything if nothing interesting is provided', () => {
     const { container } = render(
-      <StringList repos={false} error={false} loading={false} />,
+      <StringList list={false} error={false} loading={false} />,
     );
 
     expect(container.firstChild).toBeNull();
