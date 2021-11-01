@@ -52,7 +52,7 @@ export function HomePage({ list, loading, error, onMount }) {
         <h1>
           <FormattedMessage {...messages.header} />
         </h1>
-        <h2>{list.strings ? `${list.strings}` : 'Empty'}</h2>
+        <h2>{list.strings ? `List of Strings` : 'Empty'}</h2>
         <StringList {...listProps} />
       </CenteredSection>
     </Section>
