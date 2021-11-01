@@ -19,7 +19,6 @@ export function* getList() {
   try {
     // call request helper (see 'utils/request')
     const list = yield call(request, requestURL);
-    console.log('in saga', list);
     yield put(listLoaded(list));
   } catch (err) {
     yield put(listLoadingError(err));

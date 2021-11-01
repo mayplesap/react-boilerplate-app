@@ -18,7 +18,6 @@ export default function StringListItem(props) {
 
   // Put together the content of the list
   const content = <Wrapper>{item}</Wrapper>;
-  console.log('INside string list item', item);
   // Render the content into a list item
   return <ListItem key={item} item={content} />;
 }

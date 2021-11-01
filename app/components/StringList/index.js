@@ -7,7 +7,6 @@ import LoadingIndicator from 'components/LoadingIndicator';
 import StringListItem from 'containers/StringListItem';
 
 function StringList({ loading, error, list }) {
-  console.log('INSIDE STRING LIST', list.strings, list, loading);
   if (loading) {
     return <List component={LoadingIndicator} />;
   }
@@ -20,7 +19,6 @@ function StringList({ loading, error, list }) {
   }
 
   if (list !== false) {
-    console.log('INSIDE STRING LIST if condition', list);
     return <List items={list.strings} component={StringListItem} />;
   }
 
