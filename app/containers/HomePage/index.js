@@ -27,17 +27,11 @@ import { loadList } from '../App/actions';
 import reducer from '../App/reducer';
 import saga from './saga';
 
-const key = 'home';
+const key = 'global';
 
 export function HomePage({ list, loading, error, onMount }) {
   useInjectReducer({ key, reducer });
   useInjectSaga({ key, saga });
-
-  const listProps = {
-    loading,
-    error,
-    list,
-  };
 
   useEffect(() => {
     // load strings
@@ -46,8 +40,11 @@ export function HomePage({ list, loading, error, onMount }) {
     }
   }, []);
 
-  console.log('in homepage');
-  console.log('listprops', listProps.list);
+  const listProps = {
+    loading,
+    error,
+    list,
+  };
 
   return (
     <Section>
@@ -55,6 +52,7 @@ export function HomePage({ list, loading, error, onMount }) {
         <h1>
           <FormattedMessage {...messages.header} />
         </h1>
+        <h2>{list.strings ? `${list.strings}` : 'Empty'}</h2>
         <StringList {...listProps} />
       </CenteredSection>
     </Section>
