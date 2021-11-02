@@ -35,7 +35,7 @@ export function loadList() {
 /**
  * Dispatched when the list is loaded by the request saga
  *
- * @return {object}      An action object with a type of LOAD_STRING_SUCCESS passing the repos
+ * @return {object}      An action object with a type of LOAD_STRING_SUCCESS passing the list
  */
 export function listLoaded(strings) {
   return {
