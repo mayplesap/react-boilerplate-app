@@ -12,4 +12,8 @@ export default defineMessages({
     id: `${scope}.header`,
     defaultMessage: 'This is the AddString container!',
   },
+  addNew: {
+    id: `${scope}.add.new`,
+    defaultMessage: 'Add new item',
+  },
 });
