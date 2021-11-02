@@ -19,6 +19,8 @@ import {
   makeSelectLoading,
   makeSelectError,
 } from 'containers/App/selectors';
+import A from 'components/A';
+import Button from 'components/Button';
 import StringList from 'components/StringList';
 import CenteredSection from './CenteredSection';
 import Section from './Section';
@@ -53,6 +55,9 @@ export function HomePage({ list, loading, error, onMount }) {
           <FormattedMessage {...messages.header} />
         </h1>
         <h2>{list.strings ? `List of Strings` : 'Empty'}</h2>
+        <A href="/add">
+          <Button>Add new item</Button>
+        </A>
         <StringList {...listProps} />
       </CenteredSection>
     </Section>
