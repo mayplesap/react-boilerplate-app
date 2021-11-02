@@ -26,9 +26,10 @@ import {
  *
  * @return {object} An action object with a type of CHANGE_STRING
  */
-export function changeString() {
+export function changeString(input) {
   return {
     type: CHANGE_STRING,
+    input,
   };
 }
 
@@ -37,10 +38,10 @@ export function changeString() {
  *
  * @return {object}      An action object with a type of SUBMIT_STRING_SUCCESS passing the input
  */
-export function stringSubmitted(input) {
+export function stringSubmitted(submit) {
   return {
     type: SUBMIT_STRING_SUCCESS,
-    input,
+    submit,
   };
 }
 
