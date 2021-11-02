@@ -22,8 +22,8 @@ import {
 import A from 'components/A';
 import Button from 'components/Button';
 import StringList from 'components/StringList';
-import CenteredSection from './CenteredSection';
-import Section from './Section';
+import CenteredSection from 'components/CenteredSection';
+import Section from 'components/Section';
 import messages from './messages';
 import { loadList } from '../App/actions';
 import reducer from '../App/reducer';

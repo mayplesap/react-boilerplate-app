@@ -13,6 +13,8 @@ import { useInjectReducer } from 'utils/injectReducer';
 import { useInjectSaga } from 'utils/injectSaga';
 import A from 'components/A';
 import Button from 'components/Button';
+import CenteredSection from 'components/CenteredSection';
+import Section from 'components/Section';
 import Form from './Form';
 import Input from './Input';
 import { changeString, stringSubmitted } from './actions';
@@ -38,28 +40,30 @@ export function AddString({
   useInjectSaga({ key, saga });
 
   return (
-    <div>
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
-      <Form onSubmit={onSubmitForm}>
-        {error ? <p>error</p> : null}
-        {error === false && submit ? <p>success</p> : null}
-        <label htmlFor="string">
-          <FormattedMessage {...messages.addNew} />
-        </label>
-        <Input
-          id="string"
-          type="text"
-          onChange={onChangeString}
-          value={input}
-        />
-        <Button type="submit">Add</Button>
-      </Form>
-      <A href="/">
-        <Button type="button">Back</Button>
-      </A>
-    </div>
+    <Section>
+      <CenteredSection>
+        <h1>
+          <FormattedMessage {...messages.header} />
+        </h1>
+        <Form onSubmit={onSubmitForm}>
+          {error ? <p>error</p> : null}
+          {error === false && submit ? <p>success</p> : null}
+          <label htmlFor="string">
+            <FormattedMessage {...messages.addNew} />
+          </label>
+          <Input
+            id="string"
+            type="text"
+            onChange={onChangeString}
+            value={input}
+          />
+          <Button type="submit">Add</Button>
+        </Form>
+        <A href="/">
+          <Button type="button">Back</Button>
+        </A>
+      </CenteredSection>
+    </Section>
   );
 }
 
