@@ -1,6 +1,5 @@
 ## Info
-  - react-boilerplate-app with express server
-  - https://github.com/mayplesap/react-boilerplate-express-server
+  - react-boilerplate-app with express server -> https://github.com/mayplesap/react-boilerplate-express-server
 
 ## Quick start
 
