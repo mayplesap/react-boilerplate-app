@@ -1,15 +1,15 @@
+## Info
+  - react-boilerplate-app with express server
+  - https://github.com/mayplesap/react-boilerplate-express-server
+
 ## Quick start
 
 1.  Make sure that you have Node.js v8.15.1 and npm v5 or above installed.
-2.  Clone this repo using `git clone --depth=1 https://github.com/react-boilerplate/react-boilerplate.git <YOUR_PROJECT_NAME>`
-3.  Move to the appropriate directory: `cd <YOUR_PROJECT_NAME>`.<br />
-4.  Run `npm run setup` in order to install dependencies and clean the git repo.<br />
-    _At this point you can run `npm start` to see the example app at `http://localhost:3000`._
-5.  Run `npm run clean` to delete the example app.
-
-Now you're ready to rumble!
-
-> Please note that this boilerplate is **production-ready and not meant for beginners**! If you're just starting out with react or redux, please refer to https://github.com/petehunt/react-howto instead. If you want a solid, battle-tested base to build your next product upon and have some experience with react, this is the perfect start for you.
+2.  Clone this repo
+3.  Move to the appropriate directory
+4.  Run `npm install` in order to install dependencies
+5.  Run `npm start` to start the app.
+6.  Run `npm test` to run the tests.
 
 ## Documentation
 
