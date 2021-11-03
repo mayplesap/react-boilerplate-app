@@ -16,5 +16,32 @@ describe('makeSelectInput', () => {
 
     expect(inputSelector(mockedState)).toEqual(input);
   });
-  console.log(makeSelectSubmit, makeSelectError);
+});
+
+describe('makeSelectSubmit', () => {
+  const submitSelector = makeSelectSubmit();
+  it('should select the submit', () => {
+    const submit = 'test';
+    const mockedState = {
+      addString: {
+        submit,
+      },
+    };
+
+    expect(submitSelector(mockedState)).toEqual(submit);
+  });
+});
+
+describe('makeSelectError', () => {
+  const errorSelector = makeSelectError();
+  it('should select error', () => {
+    const error = 404;
+    const mockedState = {
+      addString: {
+        error,
+      },
+    };
+
+    expect(errorSelector(mockedState)).toEqual(error);
+  });
 });
